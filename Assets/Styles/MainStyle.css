@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  width: 100%;
+  height: 12vh;
+  padding: 10px;
+  box-shadow: 0px 1px 6px #b5b5b5;
+  /* background: red; */
+}
+nav {
+  width: 95%;
+  margin: auto;
+  /* background-color: blue; */
+}
+#logo img {
+  width: 60px;
+}
+#logo h2 {
+  font-weight: bolder;
+  background-image: linear-gradient(90deg, blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ul {
+  list-style: none;
+  /* background: green; */
+}
+nav ul li {
+  margin-left: 15px;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul li a button {
+  padding: 4px 15px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  background: #1a6df2;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav ul li:first-child {
+  position: relative;
+}
+nav ul img {
+  width: 25px;
+  position: absolute;
+  top: -15px;
+  right: 65%;
+  transform: translateX(-50%) rotate(-20deg);
+}
+nav,
+ul,
+#logo {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main {
+  width: 100%;
+  height: 85vh;
+  margin-top: 20px;
+}
+.hero {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.heroContent {
+  padding: 30px;
+}
+.heroContent,
+.heroImg {
+  flex-basis: 50%;
+}
+.heroContent h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+.heroContent h1 span {
+  background-image: linear-gradient(
+    90deg,
+    rgb(233, 13, 57),
+    rgb(26, 150, 233),
+    rgb(241, 106, 16)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heroContent p {
+    width: 80%;
+  font-size: 16px;
+  margin-top: 20px;
+  /* font-weight: bold; */
+  color: #676767;
+}
+.heroContent a {
+  margin-top: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+.heroContent a button {
+  margin-top: 30px;
+  padding: 8px 18px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #1a6df2;
+  cursor: pointer;
+  border-radius: 20px 0;
+}
+.heroContent a span {
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 1px 1px 8px #4f4f4f;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.heroContent a:hover span {
+  transform: translateX(10px);
+}
+.heroImg .mainImg img {
+  width: 350px;
+  display: flex;
+  margin: auto;
+  z-index: 5;
+}
+.heroImg {
+  position: relative;
+}
+.heroImg::before {
+  content: "";
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  right: 0;
+  background: #15ffcb;
+  background: linear-gradient(to bottom right, #15ffcb, #d701e5);
+  animation: float 10s linear infinite alternate;
+  z-index: -1;
+}
+@keyframes float {
+  0% {
+    border-radius: 75% 25% 67% 33% / 24% 70% 30% 76%;
+  }
+  10% {
+    border-radius: 75% 25% 56% 44% / 35% 60% 40% 65%;
+  }
+  20% {
+    border-radius: 57% 43% 40% 60% / 35% 39% 61% 65%;
+  }
+  30% {
+    border-radius: 43% 57% 60% 40% / 49% 56% 44% 51%;
+  }
+  40% {
+    border-radius: 43% 57% 49% 51% / 57% 45% 55% 43%;
+  }
+  50% {
+    border-radius: 43% 57% 55% 45% / 39% 45% 55% 61%;
+  }
+  60% {
+    border-radius: 43% 57% 33% 67% / 60% 28% 72% 40%;
+  }
+  70% {
+    border-radius: 43% 57% 20% 80% / 37% 47% 53% 63%;
+  }
+  80% {
+    border-radius: 43% 57% 42% 58% / 58% 47% 53% 42%;
+  }
+  90% {
+    border-radius: 43% 57% 32% 68% / 73% 32% 68% 27%;
+  }
+  100% {
+    border-radius: 43% 57% 61% 39% / 27% 56% 44% 73%;
+  }
+}
+.heroImg .otherImg img:nth-child(1) {
+  width: 100px;
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  animation: move 5s linear infinite;
+  z-index: 2;
+}
+.heroImg .otherImg img:nth-child(2) {
+  width: 100px;
+  position: absolute;
+  top: 55px;
+  right: 70px;
+  animation: move 4s linear infinite;
+  animation-delay: 2s;
+  z-index: 2;
+}
+.heroImg .otherImg img:nth-child(3) {
+  width: 100px;
+  position: absolute;
+  top: -81px;
+  right: 256px;
+  animation: move 3.5s linear infinite;
+  animation-delay: 1s;
+  z-index: 2;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px) translateY(0px);
+  }
+  25% {
+    transform: translate(10px) translateY(5px);
+  }
+  50% {
+    transform: translate(0px) translateY(0px);
+  }
+  75% {
+    transform: translate(-10px) translateY(-5px);
+  }
+  100% {
+    transform: translate(0px) translateY(0px);
+  }
+}
